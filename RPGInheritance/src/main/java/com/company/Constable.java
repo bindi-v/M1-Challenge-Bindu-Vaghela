@@ -10,11 +10,13 @@ public class Constable extends Character {
 
     public void arrest(Character criminal) {
 
-        System.out.println("You are arrested! Constable arrest criminal.");
+        System.out.println(criminal.getName() + " -You are arrested! Constable arrest criminal.");
     }
 
     public String getJurisdiction() {
 
         return jurisdiction;
     }
+
+
 }

@@ -8,7 +8,7 @@ public abstract class Character {
     int speed;
     int attackPower;
     boolean running;
-
+    boolean arrested;
 
     public Character(String name, int strength, int health, int stamina, int speed, int attackPower) {
         this.name = name;
@@ -19,11 +19,13 @@ public abstract class Character {
         this.attackPower = attackPower;
     }
 
-    public void run() {
-        System.out.println("Character Running!!");
+    public void attackCharacter(Character c) {
+        System.out.println(c.getName() + " is Attacked ");
     }
 
-
+    public boolean isArrested() {
+        return arrested;
+    }
 
     public String getName() {
         return name;
@@ -80,5 +82,6 @@ public abstract class Character {
     public void setRunning(boolean running) {
         this.running = running;
     }
+
 
 }
