@@ -11,7 +11,18 @@ public class IceCream {
     public IceCream(String flavor, double price, int quantity) {
         this.flavor = flavor;
         this.price = price;
-        this.quantity = quantity;
+        this.quantity = 200;
+    }
+
+
+    public double scoop(int scoops) {
+        this.quantity -= scoops * 3;
+        System.out.format("The price will be %f dollars!", price * scoops );
+        return this.quantity;
+    }
+
+    public void sampleIceCream() {
+        this.quantity--;
     }
 
     public String getFlavor() {

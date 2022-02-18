@@ -7,11 +7,11 @@ public class IceCream {
        private String flavor;
        private double salePrice;
        private double productionCost;
-       private double productionTime;
-       private String ingredients;
+       private int productionTime;
+       private String[] ingredients;
 
 
-    public IceCream(String flavor, double salePrice, double productionCost, double productionTime, String ingredients) {
+    public IceCream(String flavor, double salePrice, double productionCost, int productionTime, String[] ingredients) {
         this.flavor = flavor;
         this.salePrice = salePrice;
         this.productionCost = productionCost;
@@ -19,7 +19,9 @@ public class IceCream {
         this.ingredients = ingredients;
     }
 
-    public IceCream() {
+    public void IceCreamFlavor(double quantity) {
+        System.out.format("%d gallons of %s Ice Cream will take %d hours to produce%n", flavor, quantity, productionTime*quantity);
+        System.out.format("Ice Cream will cost %.2f to produce and sold at %.2f %n", productionCost*quantity, salePrice*quantity);
 
     }
 
@@ -53,15 +55,15 @@ public class IceCream {
         return productionTime;
     }
 
-    public void setProductionTime(double productionTime) {
+    public void setProductionTime(int productionTime) {
         this.productionTime = productionTime;
     }
 
-    public String getIngredients() {
+    public String[] getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
+    public void setIngredients(String[] ingredients) {
         this.ingredients = ingredients;
     }
 
