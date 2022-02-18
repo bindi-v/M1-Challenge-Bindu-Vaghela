@@ -3,8 +3,6 @@ package com.company;
 
 import com.company.interfaces.Converter;
 
-import java.util.Scanner;
-
 public class ConverterIf implements Converter {
     //public interface Converter {
 //   private int monthNumber;
@@ -61,6 +59,7 @@ public class ConverterIf implements Converter {
     }
 
     public String convertDay(int dayNumber){
+        System.out.println("--------------------------------------------------");
         System.out.println("Convert number into day of week by if statements.\n");
         String dayOfWeek = null;
         if(dayNumber == 1) {

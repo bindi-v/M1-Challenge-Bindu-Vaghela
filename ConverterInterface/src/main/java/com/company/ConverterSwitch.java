@@ -7,97 +7,107 @@ public class ConverterSwitch implements Converter {
 //    public void convertSwitch() {
 //        System.out.println("Convert by Switch statements.");
 //    }
-    /*
-         * This method converts the given number into its corresponding month.
-         * @param monthNumber the number you wish to convert to a month
-         * @return the name of the corresponding month if the parameter value is between 1 and 12; error message otherwise
-         */
+
        // String convertMonthSwitch(int monthNumber);
     public String convertMonth(int monthNumber) {
         System.out.println("----------------------------------------");
         System.out.println("Convert a number into month by switch.\n");
-        String monthName;
+        String monthName = "January";
         switch(monthNumber) {
             case 1:
-                System.out.println("Month is : January");
+                monthName = "January";
+                System.out.println("Month is : " + monthName);
                 break;
             case 2:
-                System.out.println("Month is : February");
+                monthName = "February";
+                System.out.println("Month is : " + monthName);
                 break;
             case 3:
-                System.out.println("Month is : March");
+                monthName = "March";
+                System.out.println("Month is : " + monthName);
                 break;
             case 4:
-                System.out.println("Month is : April");
+                monthName = "April";
+                System.out.println("Month is : " + monthName);
                 break;
             case 5:
-                System.out.println("Month is : May");
+                monthName = "May";
+                System.out.println("Month is : " + monthName);
                 break;
             case 6:
-                System.out.println("Month is : June");
+                monthName = "June";
+                System.out.println("Month is : " + monthName);
                 break;
             case 7:
-                System.out.println("Month is : July");
+                monthName = "July";
+                System.out.println("Month is : " + monthName);
                 break;
             case 8:
-                System.out.println("Month is : August");
+                monthName = "August";
+                System.out.println("Month is : " + monthName);
                 break;
             case 9:
-                System.out.println("Month is : September");
+                monthName = "September";
+                System.out.println("Month is : " + monthName);
                 break;
             case 10:
-                System.out.println("Month is : October");
+                monthName = "October";
+                System.out.println("Month is : " + monthName);
                 break;
             case 11:
-                System.out.println("Month is : November");
+                monthName = "November";
+                System.out.println("Month is : " + monthName);
                 break;
             case 12:
-                System.out.println("Month is : December");
+                monthName = "December";
+                System.out.println("Month is : " + monthName);
                 break;
             default:
                 System.out.println("Error From Switch: Invalid Input for month number! Enter a number from 1 to 12. ");
                 break;
         }
-        return null;
+        return monthName;
     }
 
-    /*
-         * This method converts the given number into its corresponding day of the week.
-         * @param dayNumber number you wish to convert to a day of the week
-         * @return the name of the corresponding day if the parameter value is between 1 and 7, error message otherwise
-         * The first day of the week is Sunday
-         */
+
    // String convertDaySwitch(int dayNumber);
     public String convertDay(int dayNumber) {
+        System.out.println("------------------------------------------");
         System.out.println("Convert a number to day of week by switch.\n");
+        String dayOfWeek = "Sunday";
         switch(dayNumber) {
             case 1:
-                System.out.println("Day of the week is : Sunday");
+                dayOfWeek = "Sunday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             case 2:
-                System.out.println("Day of the week is : Monday");
+                dayOfWeek = "Monday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             case 3:
-                System.out.println("Day of the week is : Tuesday");
+                dayOfWeek = "Tuesday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             case 4:
-                System.out.println("Day of the week is : Wednesday");
+                dayOfWeek = "Wednesday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             case 5:
-                System.out.println("Day of the week is : Thursday");
+                dayOfWeek = "Thursday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             case 6:
-                System.out.println("Day of the week is : Friday");
+                dayOfWeek = "Friday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             case 7:
-                System.out.println("Day of the week is : Saturday");
+                dayOfWeek = "Saturday";
+                System.out.println("Day of the week is : " + dayOfWeek);
                 break;
             default:
                 System.out.println("Error From Switch: Invalid input for day number of week! Enter a number from 1 to 7.");
                 break;
         }
-        return null;
+        return dayOfWeek;
     }
-
-   // }
 }
