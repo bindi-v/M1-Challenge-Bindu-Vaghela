@@ -9,7 +9,6 @@ public class RPGInheritanceApp {
 
         farmer.isPlowing();
         farmer.isHarvesting();
-      //  farmer.attackPower;
 
         constable.arrest(warrior);
         constable.getJurisdiction();
