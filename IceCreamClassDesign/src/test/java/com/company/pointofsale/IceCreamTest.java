@@ -6,15 +6,22 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class IceCreamTest {
-    IceCream iceCream = new IceCream("vanilla", 2.50, 1);
+    IceCream iceCream = new IceCream("chocolate", 2.50, 1);
 
     @Test
     public void shouldReturnIceCreamFlavour() {
-        assertEquals("vanilla", iceCream.getFlavor());
+        assertNotEquals("vanilla", iceCream.getFlavor());
     }
 
-    public  void shouldReturnPriceForIceCreamScoops() {
-        assertEquals(5.0, iceCream.scoop(2));
+    @Test
+    public  void shouldCheckPriceForIceCreamScoops() {
+        assertEquals(2.5, iceCream.getPrice(), 0.001);
         
+    }
+
+    @Test
+    public void testChooseContainer() {
+
+        assertEquals("Waffle Cone", iceCream.chooseContainer("Waffle Cone"));
     }
 }

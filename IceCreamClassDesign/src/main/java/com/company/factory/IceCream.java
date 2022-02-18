@@ -1,14 +1,15 @@
 package com.company.factory;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class IceCream {
 
-       private String flavor;
-       private double salePrice;
-       private double productionCost;
-       private int productionTime;
-       private String[] ingredients;
+    private String flavor;
+    private double salePrice;
+    private double productionCost;
+    private int productionTime;
+    private String[] ingredients;
 
 
     public IceCream(String flavor, double salePrice, double productionCost, int productionTime, String[] ingredients) {
@@ -20,12 +21,12 @@ public class IceCream {
     }
 
     public void IceCreamFlavor(double quantity) {
-        System.out.format("%d gallons of %s Ice Cream will take %d hours to produce%n", flavor, quantity, productionTime*quantity);
-        System.out.format("Ice Cream will cost %.2f to produce and sold at %.2f %n", productionCost*quantity, salePrice*quantity);
+        System.out.format("%d gallons of %s Ice Cream will take %d hours to produce%n", flavor, quantity, productionTime * quantity);
+        System.out.format("Ice Cream will cost %.2f to produce and sold at %.2f %n", productionCost * quantity, salePrice * quantity);
 
     }
 
-  // Getters and Setters
+    // Getters and Setters
 
     public String getFlavor() {
         return flavor;
@@ -67,7 +68,7 @@ public class IceCream {
         this.ingredients = ingredients;
     }
 
-  // Equals and Hash
+    // Equals and Hash
 
     @Override
     public boolean equals(Object o) {
@@ -91,7 +92,9 @@ public class IceCream {
                 ", salePrice=" + salePrice +
                 ", productionCost=" + productionCost +
                 ", productionTime=" + productionTime +
-                ", ingredients='" + ingredients + '\'' +
+                ", ingredients=" + Arrays.toString(ingredients) +
                 '}';
     }
 }
+
+

@@ -25,10 +25,12 @@ public class CustomerTest {
     public void shouldReturnFirstNameOfCustomer() {
         assertEquals("Tom", customer.getFirstName());
     }
+
     @Test
     public void shouldReturnLastNameOfCustomer() {
         assertEquals("Jerry", customer.getLastName());
     }
+
     @Test
     public void shouldReturnEmailOfCustomer() {
 
@@ -40,17 +42,14 @@ public class CustomerTest {
         assertEquals(1234567890, customer.getPhoneNumber());
     }
 
-//    @Test
-//    public void shouldReturnCustomerShippingAddress() {
-//        assertEquals("failedMessage", "123, Point Dr, Apt 1, Rosswell, GA, 30040",  customer.getShippingAddress());
-//    }
-//
-//     //assertEquals(String address, String s, String s1, String rosswell, String ga, String s2, Address shippingAddress) {
-//    //}
+    @Test
+    public void shouldReturnCustomerShippingAddress() {
+        assertEquals("30040",  customer.getShippingAddress().getZipcode());
+    }
 
+    @Test
+    public void shouldReturnCustomerIsRewardMemberOrNot() {
+        assertTrue( customer.getRewardMember().isRewardMember());
 
-//    @Test
-//    public void shouldReturnCustomerIsRewardMemberOrNot() {
-//        assertEquals(true, customer.getRewardMember());
-//    }
+    }
 }

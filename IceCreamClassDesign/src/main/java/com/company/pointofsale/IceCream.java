@@ -7,18 +7,28 @@ public class IceCream {
     private String flavor;
     private double price;
     private int quantity;
+    private String topping;
+    private String iceCreamContainer;
 
     public IceCream(String flavor, double price, int quantity) {
         this.flavor = flavor;
         this.price = price;
-        this.quantity = 200;
+        this.quantity = quantity;
     }
 
+    public String chooseContainer(String iceCreamContainer) {
+        this.iceCreamContainer = iceCreamContainer;
+        return this.iceCreamContainer;
+    }
+    public void addToppings(String topping) {
+        System.out.println("Toppings added on Ice Cream!!");
+        this.topping = topping;
+    }
 
     public double scoop(int scoops) {
-        this.quantity -= scoops * 3;
+        this.price -= scoops * this.price;
         System.out.format("The price will be %f dollars!", price * scoops );
-        return this.quantity;
+        return this.price;
     }
 
     public void sampleIceCream() {
