@@ -1,5 +1,7 @@
 package com.company.composition;
 
+import java.util.Objects;
+
 public class Customer {
     private String firstName;
     private String lastName;
@@ -68,5 +70,31 @@ public class Customer {
 
     public void setRewardMember(RewardMember rewardMember) {
         this.rewardMember = rewardMember;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return phoneNumber == customer.phoneNumber && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(email, customer.email) && Objects.equals(shippingAddress, customer.shippingAddress) && Objects.equals(billingAddress, customer.billingAddress) && Objects.equals(rewardMember, customer.rewardMember);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, email, phoneNumber, shippingAddress, billingAddress, rewardMember);
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", shippingAddress=" + shippingAddress +
+                ", billingAddress=" + billingAddress +
+                ", rewardMember=" + rewardMember +
+                '}';
     }
 }

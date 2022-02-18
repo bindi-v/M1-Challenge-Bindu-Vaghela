@@ -42,7 +42,7 @@ public class CustomerTest {
 
 //    @Test
 //    public void shouldReturnCustomerShippingAddress() {
-//        assertEquals("123", "123, Point Dr", "Apt 1", "Rosswell", "GA", "30040",  customer.getShippingAddress());
+//        assertEquals("failedMessage", "123, Point Dr, Apt 1, Rosswell, GA, 30040",  customer.getShippingAddress());
 //    }
 //
 //     //assertEquals(String address, String s, String s1, String rosswell, String ga, String s2, Address shippingAddress) {
