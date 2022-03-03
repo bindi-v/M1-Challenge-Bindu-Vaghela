@@ -18,6 +18,10 @@ public class RewardMember {
         this.rewardMember = rewardMember;
     }
 
+    public void getRewardMember(boolean rewardMember) {
+        this.rewardMember = rewardMember;
+    }
+
     public void setRewardMember(boolean rewardMember) {
         this.rewardMember = rewardMember;
     }
