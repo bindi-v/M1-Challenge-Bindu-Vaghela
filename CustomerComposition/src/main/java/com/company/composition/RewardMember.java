@@ -6,19 +6,21 @@ public class RewardMember {
 
     private boolean rewardMember;
 
-    public RewardMember(boolean rewardMember) {
-        this.rewardMember = rewardMember;
-    }
 
     public boolean isRewardMember() {
         return rewardMember;
     }
 
-    public void setRewardMember(boolean rewardMember) {
+    public RewardMember() {
+    }
+
+    public RewardMember(boolean rewardMember) {
         this.rewardMember = rewardMember;
     }
 
-    // Equal and HashCode
+    public void setRewardMember(boolean rewardMember) {
+        this.rewardMember = rewardMember;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -32,8 +34,6 @@ public class RewardMember {
     public int hashCode() {
         return Objects.hash(rewardMember);
     }
-
-    // To String
 
     @Override
     public String toString() {
